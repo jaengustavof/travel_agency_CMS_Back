@@ -1,28 +1,25 @@
-const Amadeus = require('amadeus');
+const { getLoginUser } = require("../../queries/auth");
+const { hash, serialize } = require("../../utils");
+const { login } = require("../../errors/auth"); 
+const errors = require("../../errors/commons");
 
-const amadeus = new Amadeus({
-    clientId: 'RIwRKcDtMiRpwUmNjNZXrnDhMEq2Fmee',
-    clientSecret: 'tH2HUr6vGOBfhtSA',
-    
-  });
-  
 
 module.exports = (db) => async (req, res, next) => {
+    const { user_email, user_password } = req.body;
 
-    amadeus.shopping.flightOffersSearch.get({
-        originLocationCode: 'BCN',
-        destinationLocationCode: 'MAD',
-        departureDate: '2023-04-01',
-        returnDate: '2023-04-08',
-        adults: '2'
-    }).then(function(response){
-      console.log(response.data[0]);
-    }).catch(function(responseError){
-      console.log(responseError.code);
+    const queryResult = await getLoginUser(db)({
+      user_email,
+      compareFn: hash.compare(user_password),
     });
+
+    console.log(queryResult)
+
+    if(!queryResult.ok) return next(login[queryResult.code] || errors[500]);
+
+    serialize(res, {email: queryResult.data.email})
 
     res.status(200).json({
       success: true,
-      message: "Test auth"
+      message: "Loged in"
     });
   };
