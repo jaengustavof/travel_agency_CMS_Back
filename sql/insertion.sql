@@ -22,10 +22,8 @@ VALUES ('Gustavo', 'Test', 'gustavo@mail.com', '12345', '666999888', (SELECT rol
 INSERT INTO "hotels" ("hotel_name", "hotel_city", "hotel_address", "h_cat_id")
 VALUES ('Novotel Madrid Center', 'Madrid', 'Calle de ODonnell, 53, 28009', (SELECT h_cat_id FROM hotel_categories WHERE h_cat_name = '4 stars')), ('Hotel NH Madrid Alonso Martínez', 'Madrid', '', (SELECT h_cat_id FROM hotel_categories WHERE h_cat_name = '3 stars')),('Hotel Soho Boutique Opera', 'Madrid', 'C. de las Veneras, 2, 28013', (SELECT h_cat_id FROM hotel_categories WHERE h_cat_name = 'boutique'));
 
-
 INSERT INTO "hotel_bookings" ("hotel_id", "user_id", "booking_id", "booking_from","booking_to", "booking_price")
 VALUES ((SELECT hotel_id FROM hotels WHERE hotel_name = 'Novotel Madrid Center'), (SELECT user_id FROM users WHERE user_email = 'gustavo@mail.com'), 'AAA1234566', '2022/10/10', '2022/10/15', '335.75'),((SELECT hotel_id FROM hotels WHERE hotel_name = 'Hotel NH Madrid Alonso Martínez'), (SELECT user_id FROM users WHERE user_email = 'pepe@mail.com'), 'DEF4452', '2022/11/10', '2022/11/15', '80.25'), ((SELECT hotel_id FROM hotels WHERE hotel_name = 'Hotel Soho Boutique Opera'), (SELECT user_id FROM users WHERE user_email = 'marta@mail.com'), 'DE558F4452', '2022/11/15', '2022/11/25', '250.25');
-
 
 INSERT INTO "air_carriers" ("carrier_name", "carrier_logo", "carrier_iata")
 VALUES ('Lufthansa', 'https://www.airfleets.net/cie/Lufthansa.jpg', 'LH'), ('Iberia', 'https://www.airfleets.net/cie/Iberia.jpg', 'IB'),('Vueling', 'https://www.airfleets.net/cie/Vueling%20Airlines.jpg', 'VY');

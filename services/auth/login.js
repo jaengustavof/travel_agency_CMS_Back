@@ -12,11 +12,12 @@ module.exports = (db) => async (req, res, next) => {
       compareFn: hash.compare(user_password),
     });
 
-    console.log(queryResult)
+    
 
     if(!queryResult.ok) return next(login[queryResult.code] || errors[500]);
 
     serialize(res, {email: queryResult.data.email})
+    console.log(res)
 
     res.status(200).json({
       success: true,

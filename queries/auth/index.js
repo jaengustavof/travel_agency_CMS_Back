@@ -9,8 +9,7 @@ const getUser =(db) => async ({ user_email }) => {
 const createUser = (db) => async ({user_name, user_last, user_email, user_password, user_phone, role_name}) => {
 
     const user = await getUser(db)({user_email});
-
-    if(user.data.length){
+    if(user.data){
         return {
             ok: false,
             code: "duplication"
@@ -29,7 +28,6 @@ const getLoginUser = (db) => async ({ user_email, compareFn }) => {
             code: "unknown"
         };
 
-    console.log(user.data.user_password)
     const checkPassword = await compareFn(user.data.user_password);
 
     if(!checkPassword)
