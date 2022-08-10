@@ -2,7 +2,7 @@ const { createUser } = require("../../queries/auth");
 const { hash, sendEmail } = require("../../utils");
 const { register } = require("../../errors/auth");
 const errors =  require("../../errors/commons");
-const nodemailer = require('nodemailer');
+
 
 module.exports = (db) => async (req, res, next) => {
 

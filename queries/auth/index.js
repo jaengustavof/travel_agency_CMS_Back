@@ -19,6 +19,7 @@ const createUser = (db) => async ({user_name, user_last, user_email, user_passwo
     return await queryCatcher (db.query, "createUser")(insetUser({user_name, user_last, user_email, user_password, user_phone, role_name}));
 }
 
+
 const getLoginUser = (db) => async ({ user_email, compareFn }) => {
     const user = await getUser(db)({user_email});
 

@@ -17,11 +17,11 @@ CREATE TABLE IF NOT EXISTS roles (
 
 CREATE TABLE IF NOT EXISTS users (
     user_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-    user_name varchar(25) NOT NULL,
-    user_last varchar(25) NOT NULL,
-    user_email varchar(25) NOT NULL UNIQUE,
-    user_password varchar(25) NOT NULL,
-    user_phone varchar(25) NOT NULL,
+    user_name varchar(255) NOT NULL,
+    user_last varchar(255) NOT NULL,
+    user_email varchar(255) NOT NULL UNIQUE,
+    user_password varchar(255) NOT NULL,
+    user_phone varchar(255) NOT NULL,
     role_id uuid REFERENCES roles   
         ON UPDATE CASCADE
         ON DELETE SET NULL
