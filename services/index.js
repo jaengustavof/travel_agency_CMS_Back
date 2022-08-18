@@ -6,6 +6,9 @@ module.exports = (db) => {
     router.use("/users", require("./users")(db));/* notas */
     router.use("/hotel_categories", require("./hotel_categories")(db))
     router.use("/hotels", require("./hotels")(db));
-    router.use("/hotel_bookings", require("./hotel_bookings")(db))
+    router.use("/hotel_bookings", require("./hotel_bookings")(db));
+    router.use("/ticket_types", require("./ticket_types")(db));
+    router.use("/flight_bookings", require("./flight_bookings")(db))
+
     return router;
 };

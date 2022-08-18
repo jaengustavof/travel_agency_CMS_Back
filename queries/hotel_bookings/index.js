@@ -12,7 +12,6 @@ const getOneBooking = (db) => async({booking_id}) =>{
     return await queryCatcher(db.maybeOne, "getOneBooking")(selectOneBooking({booking_id}));
 }
 
-
 const createBooking = (db) => async({hotel_id, user_id, booking_id, booking_from, booking_to, booking_price}) => {
     return await queryCatcher(db.query, "createBooking")(createOneBooking({hotel_id, user_id, booking_id, booking_from, booking_to, booking_price}));
 }

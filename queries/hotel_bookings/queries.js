@@ -3,8 +3,6 @@ const { sql } = require("slonik");
 
 const selectAllBookings = () =>{
     return sql `
-
-
     SELECT *
     FROM hotel_bookings
     JOIN hotels
