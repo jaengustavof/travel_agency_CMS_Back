@@ -1,27 +1,27 @@
-
 const Amadeus = require('amadeus');
+
 const amadeus = new Amadeus({
     clientId: process.env.AMADEUS_clientId,
     clientSecret: process.env.AMADEUS_clientIdclientSecret, 
-});
+  });
 
+const searchOneFlight = () => async ({origin, destination, departureDate, returnDate, pax}) => {
+    console.log(origin, destination, departureDate, returnDate, pax )
 
-module.exports = () => async (req, res, next) => {
-
-  const {origin, destination, departureDate, returnDate, pax} =  req.body
-
-  amadeus.shopping.flightOffersSearch.get({
+    amadeus.shopping.flightOffersSearch.get({
         originLocationCode: origin,
         destinationLocationCode: destination,
         departureDate: departureDate,
         returnDate: returnDate,
-        adults: pax,
-        max: "25"
+        adults: pax
     }).then(function(response){
-      console.log(response.data);
-      res.send(response.data);
+      console.log(response.data[0]);
+      return response.data[0]
     }).catch(function(responseError){
       console.log(responseError.code);
     });
+}
 
-  };
+module.exports = {
+    searchOneFlight
+}
