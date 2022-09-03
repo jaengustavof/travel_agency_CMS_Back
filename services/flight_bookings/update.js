@@ -4,9 +4,7 @@ const errors = require("../../errors/flight_bookings")
 module.exports = (db) => async (req, res, next) => {
 
     const {
-        carrier_id, 
         user_id, 
-        ticket_type_id, 
         booking_id, 
         booking_departure, 
         booking_return, 
@@ -17,9 +15,8 @@ module.exports = (db) => async (req, res, next) => {
     const booking = await getOneBooking(db)({booking_id});
     if(!booking.data) return next(errors[404])
 
-    const queryResult = await updateBooking(db)({carrier_id, 
+    const queryResult = await updateBooking(db)({ 
         user_id, 
-        ticket_type_id, 
         booking_id, 
         booking_departure, 
         booking_return, 

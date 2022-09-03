@@ -7,7 +7,7 @@ module.exports = (db) => async (req, res, next) => {
 
     const user = await getOneUser(db)({user_email})
 
-    if(!user.data) return next(error[404])
+    if(!user.data) return next(errors[404])
     
     const queryResult = await updateUser(db)({
         user_id,
@@ -24,6 +24,6 @@ module.exports = (db) => async (req, res, next) => {
 
     res.status(200).json({
         success: true,
-        message: "Test User Update"
+        message: queryResult
     })
 }

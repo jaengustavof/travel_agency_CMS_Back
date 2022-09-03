@@ -9,15 +9,15 @@ const getOneBooking = (db) => async ({booking_id}) => {
     return await queryCatcher(db.maybeOne, "getOneBooking")(selectOneBooking({booking_id}));
 }
 
-const createBooking = (db) => async({carrier_id, user_id, ticket_type_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}) => {
+const createBooking = (db) => async({user_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}) => {
 
-    return await queryCatcher(db.query, "createBooking")(createOneBooking({carrier_id, user_id, ticket_type_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}));
+    return await queryCatcher(db.query, "createBooking")(createOneBooking({user_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}));
 
 }
 
-const updateBooking = (db) => async({carrier_id, user_id, ticket_type_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}) => {
+const updateBooking = (db) => async({user_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}) => {
 
-    return await queryCatcher(db.query, "updateBooking")(updateOneBooking({carrier_id, user_id, ticket_type_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}));
+    return await queryCatcher(db.query, "updateBooking")(updateOneBooking({user_id, booking_id, booking_departure, booking_return, booking_from, booking_to, booking_price}));
 
 }
 
