@@ -7,8 +7,6 @@ const errors =  require("../../errors/commons");
 module.exports = (db) => async (req, res, next) => {
 
     const {user_name, user_last, user_email, user_password, user_phone, role_name} = req.body;
-    console.log(req.body)
-
     const queryResult = await createUser(db)({
         user_name, 
         user_last, 
