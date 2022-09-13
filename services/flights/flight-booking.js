@@ -1,7 +1,7 @@
 const Amadeus = require('amadeus');
 const amadeus = new Amadeus({
-    clientId: process.env.AMADEUS_clientId,
-    clientSecret: process.env.AMADEUS_clientIdclientSecret, 
+    clientId: process.env.AMADEUS_CLIENTID,
+    clientSecret: process.env.AMADEUS_CLIENTSECRET,  
 });
 
 module.exports = () => async (req,res,next) => {
