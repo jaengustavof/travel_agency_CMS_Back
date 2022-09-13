@@ -8,7 +8,7 @@ const forms = {
   }
 
 module.exports = (db) => {
-    router.get("/get-all", require("./get-all")(db));
+    router.get("/", require("./get-all")(db));
     router.post("/create", checker(...forms.register), require("../auth/register")(db))
     router.post("/update", checker(...forms.update),require("./update")(db));
     router.post("/remove", checker(...forms.remove),require("./remove")(db));

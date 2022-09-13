@@ -1,0 +1,21 @@
+name: (PRODUCTION) deploy to Railway
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: install Railway CLI
+        run: npm i -g @railway/cli
+
+      - name: deploy to production
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_PROD }}
