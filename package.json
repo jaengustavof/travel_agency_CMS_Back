@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "NODE_ENV=local nodemon index.js",
     "dev:test": "NODE_ENV=test nodemon index.js",
-    "start": "node index.js"
+    "start": "NODE_ENV=production node index.js"
   },
   "author": "Gustavo Jaen",
   "license": "ISC"
