@@ -1,8 +1,8 @@
 const Amadeus = require('amadeus');
 
 const amadeus = new Amadeus({
-    clientId: process.env.AMADEUS_clientId,
-    clientSecret: process.env.AMADEUS_clientIdclientSecret, 
+    clientId: process.env.AMADEUS_CLIENTID,
+    clientSecret: process.env.AMADEUS_CLIENTSECRET, 
   });
 
 const searchOneFlight = () => async ({origin, destination, departureDate, returnDate, pax}) => {
