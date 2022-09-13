@@ -1,5 +1,6 @@
 const Amadeus = require('amadeus');
-
+console.info('Amadeus client ID ', process.env.AMADEUS_CLIENTID)
+console.info('Amadeus client SECRET ',process.env.AMADEUS_CLIENTSECRET)
 const amadeus = new Amadeus({
     clientId: process.env.AMADEUS_CLIENTID,
     clientSecret: process.env.AMADEUS_CLIENTSECRET, 
