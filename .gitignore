@@ -11,6 +11,7 @@ docs
 doc 
 .doc
 
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -82,6 +83,7 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+environments/test.js
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
