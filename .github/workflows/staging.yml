@@ -1,0 +1,21 @@
+name: (STAGING) deploy to Railway
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: install Railway CLI
+        run: npm i -g @railway/cli
+
+      - name: deploy to stagign
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_STAGING }}

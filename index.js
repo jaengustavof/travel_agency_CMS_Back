@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const db = require("./configs/db"); // en las versiones nuevas hay que poner await porque es un apromesa// Da el error fn is not a function
 const errors =  require("./errors/commons");
 const cors = require("cors")
+const { PORT } = require('./enviroments')
 
 const app = express();
 
@@ -26,6 +27,6 @@ app.use(({ statusCode, error}, _, res, __) => {
     })
 })
 
-app.listen(process.env.PORT, () =>
-    console.info(" Listening at:", process.env.PORT)
+app.listen(PORT, () =>
+    console.info(`Listening at ${PORT} | enviroment: ${process.env.NODE_ENV}` )
 )
