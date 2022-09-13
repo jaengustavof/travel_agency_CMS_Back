@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.1.0...v1.2.0) (2022-09-13)
+
+
+### Features
+
+* added production workgflow ([10794e5](https://github.com/jaengustavof/travel_agency_CMS_Back/commit/10794e5d8ceb8359fe14017b47fed1823927f0cd))
+
 ## 1.1.0 (2022-09-13)
 
 
