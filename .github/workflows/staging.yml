@@ -19,3 +19,5 @@ jobs:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_STAGING }}
+          AMADEUS_clientId: ${{ secrets.AMADEUS_CLIENTID }}
+          AMADEUS_clientIdclientSecret: ${{ secrets.AMADEUS_CLIENTIDCLIENTSECRET }}
