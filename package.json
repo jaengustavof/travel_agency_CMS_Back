@@ -16,7 +16,7 @@
     "uuid": "^8.3.2"
   },
   "name": "proyecto-final",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "travel agency cms",
   "main": "index.js",
   "scripts": {

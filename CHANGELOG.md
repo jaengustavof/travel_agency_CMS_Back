@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.2.0...v1.2.1) (2022-09-17)
+
+
+### Bug Fixes
+
+* queryResult response ([67e8fb8](https://github.com/jaengustavof/travel_agency_CMS_Back/commit/67e8fb85781a3ecc0a4bfc2449c0eaa83d4a295b))
+
 ## [1.2.0](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.1.0...v1.2.0) (2022-09-13)
 
 
