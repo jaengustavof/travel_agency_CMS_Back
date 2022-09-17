@@ -1,4 +1,4 @@
-const Amadeus = require('amadeus');
+/*const Amadeus = require('amadeus');
 console.info('Amadeus client ID ', process.env.AMADEUS_CLIENTID)
 console.info('Amadeus client SECRET ',process.env.AMADEUS_CLIENTSECRET)
 const amadeus = new Amadeus({
@@ -25,4 +25,4 @@ const searchOneFlight = () => async ({origin, destination, departureDate, return
 
 module.exports = {
     searchOneFlight
-}
+}*/
