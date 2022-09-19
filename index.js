@@ -3,14 +3,16 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const db = require("./configs/db"); // en las versiones nuevas hay que poner await porque es un apromesa// Da el error fn is not a function
 const errors =  require("./errors/commons");
-const cors = require("cors")
+const cors = require("cors");
+const options = require("./configs/cors");
 const { PORT } = require('./enviroments')
 
 const app = express();
 
+app.use(cors(options));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+
 
 
 app.use("/", require("./services")(db));
