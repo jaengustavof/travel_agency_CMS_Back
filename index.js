@@ -22,6 +22,7 @@ app.use((_, __, next) =>{
 });
 
 app.use(({ statusCode, error}, _, res, __) => {
+    console.log(error)
     res.status(statusCode).json({
         success: false,
         message: error || error.message,
