@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.3.0...v1.4.0) (2022-09-19)
+
+
+### Features
+
+* cors added ([4508fc1](https://github.com/jaengustavof/travel_agency_CMS_Back/commit/4508fc179d4e462930ae7cda50320cd647cfd4f8))
+* error message ([5f2493e](https://github.com/jaengustavof/travel_agency_CMS_Back/commit/5f2493e44b7362def40e55a5853cc6e5fa83de3c))
+
+
+### Bug Fixes
+
+* cors whitelist ([66719e7](https://github.com/jaengustavof/travel_agency_CMS_Back/commit/66719e75c434cb6d210f48cae9fd85cf50ab331a))
+
 ## [1.3.0](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.2.3...v1.3.0) (2022-09-19)
 
 
