@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.5.0...v1.6.0) (2022-11-04)
+
+
+### Features
+
+* response flight-confirm ([ea51f7b](https://github.com/jaengustavof/travel_agency_CMS_Back/commit/ea51f7b0b673ca827b5cf158dd96191dad43cead))
+
 ## [1.5.0](https://github.com/jaengustavof/travel_agency_CMS_Back/compare/v1.4.0...v1.5.0) (2022-11-04)
 
 
