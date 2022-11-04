@@ -8,6 +8,10 @@ module.exports =() => async(req, res, next) =>{
 
     const flight = req.body
     console.log(flight)
+    res.status(200).json({
+        success: true,
+        data: flight
+    })
     // Confirm availability and price
     /*
     amadeus.shopping.flightOffers.pricing.post(
