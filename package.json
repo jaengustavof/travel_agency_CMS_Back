@@ -13,6 +13,7 @@
     "nodemon": "^2.0.19",
     "pug": "^3.0.2",
     "slonik": "^28.2.0",
+    "stripe": "^10.17.0",
     "uuid": "^8.3.2"
   },
   "name": "proyecto-final",

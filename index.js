@@ -5,6 +5,7 @@ const db = require("./configs/db"); // en las versiones nuevas hay que poner awa
 const errors =  require("./errors/commons");
 const cors = require("cors");
 const options = require("./configs/cors");
+
 const { PORT } = require('./enviroments')
 
 const app = express();
@@ -12,6 +13,7 @@ const app = express();
 app.use(cors(options));
 app.use(express.json());
 app.use(cookieParser());
+
 
 
 
