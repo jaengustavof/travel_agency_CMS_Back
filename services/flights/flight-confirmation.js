@@ -7,7 +7,7 @@ const amadeus = new Amadeus({
 module.exports =() => async(req, res, next) =>{
 
     const flight = req.body
-    
+
     // Confirm availability and price
     amadeus.shopping.flightOffers.pricing.post(
         JSON.stringify({
