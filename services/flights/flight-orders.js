@@ -9,12 +9,8 @@ module.exports =() => async(req, res, next) =>{
     const selectedFlight = req.body.selectedFlight;
     const flightPasssengers = req.body.flightPasssengers;
 
-    res.status(200).json({
-        success: true,
-        data: selectedFlight
-    });
 
-   
+   /*
     amadeus.booking.flightOrders.post(
         JSON.stringify({
           'type': 'flight-order',
@@ -26,6 +22,6 @@ module.exports =() => async(req, res, next) =>{
         res.send(response.result);
         }).catch(function (response) {
             res.send(response)
-        })
+        })*/
     
 }
